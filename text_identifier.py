@@ -16,10 +16,10 @@ coordinates = []
 width = 65
 
 #repeat for every sentence in identify_string
-for sentence in identify_string:
-    sentence = [sentence]
-    newtest = [word for line in sentence for word in line.split()]
-    for words in newtest:
+for sentences in identify_string:
+    sentences = [sentences]
+    sentence = [word for line in sentences for word in line.split()]
+    for words in sentence:
         for y in d["text"]:
             #check if words match
             if words == y:
@@ -43,7 +43,9 @@ for sentence in identify_string:
     height = d["height"][coordinates[0]] + 20
     (x, y, w, h) = (left, top, width, height)
     cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
+    #reset coordinates and width after each sentence
     coordinates = []
+    width = 65
 
 #save image
 cv2.imwrite(saved_image_name,img)
