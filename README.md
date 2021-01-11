@@ -16,7 +16,7 @@
 Text Identifier was written as a side script to automate a small scope of my job while carrying out my internship at [TOFFS Technologies](https://www.toffstech.com/en/home). As part of implementing automated GUI testing, capturing relevant texts was required and having to manually mark them out on images was a huge hassle given the large amounts of screenshots. As a result, this small text identifier was born!
 
 ### Features
-This was a script previously written specifically for work-related purposes. It has been refactored to be used on general images but does not guarantee full compatibility. Currently, it only supports detecting full lines of texts (in other words, it detects an entire line in the picture and is unable to handle individual parts of the line). Upon an identified line of text, a red box is drawn around the text as a highlight. An example has been shown in the image at the top of this README!
+This was a script previously written specifically for work-related purposes. It has been refactored to be used on general images but does not guarantee full compatibility. There are also no work-sensitive information present in this entire repository. Currently, it only supports detecting full lines of texts (in other words, it detects an entire line in the picture and is unable to handle individual parts of the line). Upon an identified line of text, a red box is drawn around the text as a highlight. An example has been shown in the image at the top of this README!
 
 ### Technologies
 Technologies used by Text Identifier are as below:
@@ -53,7 +53,7 @@ $ sudo apt update
 $ sudo apt install tesseract-ocr
 ```
 * Following which, open texts.json file within the config folder and edit it with the lists of texts you wish to identify from your images (an example is already provided in the file/with the code).
-* Then, create 2 folders, input_media and output_media. Within input_media, place all the images you wish to identify text from..
+* Then, create 2 folders, input_media and output_media. Within input_media, place all the images you wish to identify text from.
 * Finally, run the command below from the base of the project directory and head to output_media for your annotated images:
 ```
 $ python3 text_identifier.py
